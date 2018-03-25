@@ -7,4 +7,6 @@ import System.IO
 import Data.Default
 
 main = do
-    xmonad $ def
+    xmonad def { terminal = "urxvt" }
+
+		
