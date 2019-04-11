@@ -10,6 +10,8 @@ main = do
 
     xmonad $ defaultConfig
         { manageHook = manageDocks <+> manageHook defaultConfig
+        , normalBorderColor = "#cb4b16"
+        , terminal = "urxvt"
         , layoutHook = avoidStruts  $  layoutHook defaultConfig
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc
