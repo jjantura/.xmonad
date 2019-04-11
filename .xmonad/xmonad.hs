@@ -15,7 +15,7 @@ main = do
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "green" "" . shorten 50
                         }
-        , modMask = mod4Mask     -- Rebind Mod to the Windows key
+        , modMask = mod1Mask     -- Rebind Mod to the Windows key
         } `additionalKeys`
         [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock; xset dpms force off")
         , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
