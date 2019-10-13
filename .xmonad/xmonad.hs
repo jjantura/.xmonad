@@ -11,6 +11,7 @@ main = do
         { manageHook = manageDocks <+> manageHook defaultConfig
         , normalBorderColor = "#93a1a1"
         , focusedBorderColor = "#b58900"
+        , borderWidth = 2
         , terminal = "urxvt"
         , layoutHook = avoidStruts  $  layoutHook defaultConfig
         , logHook = dynamicLogWithPP xmobarPP
