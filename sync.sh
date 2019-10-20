@@ -1,6 +1,6 @@
 #!/bin/bash
 cp .xmobarrc ~
-mkdir -p .xmonad
-cp .xmonad/xmonad.hs ~/.xmonad/
+mkdir -p $HOME/.xmonad
+cp .xmonad/xmonad.hs $HOME/.xmonad/
 cp .xmobarrc ~
 cp .xsessionrc ~
