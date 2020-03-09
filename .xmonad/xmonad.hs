@@ -7,12 +7,14 @@ import System.IO
 
 main = do
     xmproc <- spawnPipe "xmobar"
-
     xmonad $ defaultConfig
         { manageHook = manageDocks <+> manageHook defaultConfig
-        , normalBorderColor = "#cb4b16"
-        , terminal = "urxvt"
-        , layoutHook = avoidStruts  $  layoutHook defaultConfig
+        , normalBorderColor = "#93a1a1"
+        , focusedBorderColor = "#b58900"
+        , borderWidth = 2
+        , terminal = "lxterminal"
+        , layoutHook = avoidStruts $ layoutHook defaultConfig
+        , handleEventHook = handleEventHook defaultConfig <+> docksEventHook
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "green" "" . shorten 50
